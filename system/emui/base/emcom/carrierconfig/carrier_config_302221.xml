@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+
+<carrier_config_list>
+  <!--TELUS_CA 302221-->
+  <carrier_config>
+    <int name="callWaitingMode" value="11"/>
+  </carrier_config>
+</carrier_config_list>

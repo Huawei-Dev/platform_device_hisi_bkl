@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<carrier_config_list>
+    <!--MOVISTAR_EC-->
+    <carrier_config>
+        <!--UT NO TA-->
+        <int name="utUseApn" value="1"/>
+        <int name="callWaitingMode" value="7"/>
+    </carrier_config>
+</carrier_config_list>

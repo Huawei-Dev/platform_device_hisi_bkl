@@ -18,7 +18,7 @@ DEVICE_PACKAGE_OVERLAYS := $(LOCAL_PATH)/overlay
 
 # all prebuild needed
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,device/hisi/hi3660/system/,system/)
+	$(call find-copy-subdir-files,*,device/hisi/bkl/system/,system/)
 
 # Extra packages
 PRODUCT_PACKAGES += \
@@ -46,14 +46,19 @@ PRODUCT_PACKAGES += \
     NfcNci \
     nfc_nci.pn54x.default
 
-# Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
+    frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml \
+    frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
+    frameworks/native/data/etc/com.nxp.mifare.xml:system/etc/permissions/com.nxp.mifare.xml
+
+# Permissions
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.bluetooth.xml:system/etc/permissions/android.hardware.bluetooth.xml \
+    frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \
     frameworks/native/data/etc/android.hardware.consumerir.xml:system/etc/permissions/android.hardware.consumerir.xml \
     frameworks/native/data/etc/android.hardware.location.xml:system/etc/permissions/android.hardware.location.xml \
     frameworks/native/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
-    frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml \
-    frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:system/etc/permissions/android.hardware.opengles.aep.xml \
     frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:system/etc/permissions/android.hardware.sensor.accelerometer.xml \
     frameworks/native/data/etc/android.hardware.sensor.compass.xml:system/etc/permissions/android.hardware.sensor.compass.xml \
@@ -75,9 +80,44 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
 
-# Override device name
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_DEVICE=hi3660
-
 PRODUCT_PACKAGES += \
-    phh-su
+    hwpostcamera \
+    com.huawei.audioalgo \
+    hwEmui
+
+# Recorder
+PRODUCT_PACKAGES += \
+    SoundRecorder \
+    StorageManager \
+    Terminal
+
+PRODUCT_PROPERTY_OVERRIDES := \
+    keyguard.no_require_sim=true \
+    ro.com.android.dataroaming=true
+
+# Storage manager
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.storage_manager.enabled=true
+
+# Disable excessive dalvik debug messages
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.debug.alloc=0
+
+# Extra packages
+PRODUCT_PACKAGES += \
+    Launcher3 \
+    WallpaperPicker \
+    libWallpaperPicker \
+    android.software.live_wallpaper.xml \
+    BasicDreams \
+    PhotoTable \
+    WebViewDream \
+    OmniClockOSS
+
+# No Soft Key 
+PRODUCT_PROPERTY_OVERRIDES += \
+    qemu.hw.mainkeys=0
+
+# Google Bootanimation
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/system/media/bootanimation.zip:system/media/bootanimation.zip

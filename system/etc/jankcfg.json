@@ -551,7 +551,7 @@
         "nLogID_Count":1, "aLogFilter":[{"nLogID":105,"nFilter":1}],
         "nLogsTimeSpanPolicy_Count":0, "atLogsTSPolicy":[]
     },
-    {"nActionID":11,"nActionType":1,"nEventID":902010000,"strComment":"OLD_JANK_FRAME","nLevel_A":120,"nLevel_B":60,"nLevel_C":15,"bTimeOut":0,"nDumpBitmap":0,"eReportType":1,"nReportNumPerDay":1,
+    {"nActionID":11,"nActionType":1,"nEventID":902010000,"strComment":"OLD_JANK_FRAME","nLevel_A":2147483647,"nLevel_B":2147483647,"nLevel_C":2147483647,"bTimeOut":0,"nDumpBitmap":0,"eReportType":1,"nReportNumPerDay":1,
         "strExcludingMsg":"Keyguard",
         "nLogID_Count":6, "aLogFilter":[{"nLogID":34,"nFilter":1},
             {"nLogID":43,"nFilter":6},

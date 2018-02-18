@@ -1,0 +1,4 @@
+version=1.10.17.105
+type=EMCOMCTR
+subtype=EMUI6
+compatibleVersion=1

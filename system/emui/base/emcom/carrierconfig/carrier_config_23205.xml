@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<carrier_config_list>
+    <!-- H3A AT -->
+    <carrier_config>
+        <!--UT NO TA-->
+        <boolean name="utForbiddenWhenVolteSwitchOff" value="false"/>
+        <int name="callWaitingMode" value="11"/>
+        <int name="utNafPort" value="443"/>
+        <boolean name="utNafUseHttps" value="true"/>
+        <string name="utBsfSrvAddr">bsf.ims.mnc005.mcc232.pub.3gppnetwork.org</string>
+        <int name="utBsfPort" value="443"/>
+        <boolean name="utBsfUsehttps" value="true"/>
+        <!--VOLTE NO TA-->
+        <boolean name="carrier_default_volte_switch_on_bool" value="true"/>
+        <!-- Volte UI -->
+        <string name="carrier_volte_hd_icon_flag">10101010</string>
+    </carrier_config>
+</carrier_config_list>

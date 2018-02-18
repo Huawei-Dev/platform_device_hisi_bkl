@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<carrier_config_list>
+    <carrier_config>
+        <!-- Volte UI -->
+        <string name="carrier_volte_hd_icon_flag">00000000</string>
+        <!-- VVM -->
+        <int name="vvm_port_number_int" value="0"/>
+        <string name="vvm_destination_number_string">8082</string>
+        <string name="vvm_type_string">vvm_type_omtp</string>
+        <boolean name="vvm_cellular_data_required_bool" value="true"/>
+        <string-array name="vvm_disabled_capabilities_string_array" num="1">
+            <item value="STARTTLS"/>
+        </string-array>
+    </carrier_config>
+</carrier_config_list>

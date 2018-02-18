@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<carrier_config_list>
+    <!--SMART_PH-->
+    <carrier_config>
+        <!--UT NO TA-->
+        <int name="utUseApn" value="1"/>
+        <int name="callWaitingMode" value="11"/>
+        <int name="utBsfPort" value="80"/>
+    </carrier_config>
+</carrier_config_list>
