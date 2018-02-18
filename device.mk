@@ -118,6 +118,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     qemu.hw.mainkeys=0
 
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.sys.sdcardfs=0 \
+    persist.sys.sdcardfs.emulated=0 \
+    persist.sys.sdcardfs.public=0
+
 # Google Bootanimation
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/system/media/bootanimation.zip:system/media/bootanimation.zip
